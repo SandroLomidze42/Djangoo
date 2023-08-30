@@ -8,3 +8,7 @@ def sandro(request):
     return HttpResponse("hi Sandro")
 def marianne(request):
     return HttpResponse("So Long Marianne")
+
+def greet(request, name):
+    return HttpResponse(f"Hello,  {name.capitalize()}")
+
