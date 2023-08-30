@@ -9,6 +9,9 @@ def sandro(request):
 def marianne(request):
     return HttpResponse("So Long Marianne")
 
+#def greet(request, name):
+    #return HttpResponse(f"Hello,  {name.capitalize()}")
 def greet(request, name):
-    return HttpResponse(f"Hello,  {name.capitalize()}")
-
+    return render(request, "app1/greet.html", {
+        "name":name.capitalize()
+    })
