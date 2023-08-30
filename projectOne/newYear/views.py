@@ -5,5 +5,5 @@ from django.shortcuts import render
 def index(request):
     now=datetime.datetime.now()
     return render(request, "newYear/index.html", {
-        "newyear":now.month==1 and now.day==1
+        "newyear":now.month==8 and now.day==30
     })
