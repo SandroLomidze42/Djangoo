@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            tasks
-        </title>
-    </head>
-    <body>
-        <ul>
-            {%for task in tasks%}
-                <li>{{task}}</li>
-            {%endfor%}
-        </ul>
-    </body>
-</html>
+ {%extends "tasks/layout.html" %}
+ {%block body%}
+    <ul>
+        {%for task in tasks%}
+            <li>{{task}}</li>
+        {%endfor%}
+    </ul>
+    <!--a href="tasks/add">add a new task</a-->
+    <a href="{%url 'tasks:add'%}">add a new task</a> <!--here 'add' refers to name, not url path-->
+{%endblock%}
